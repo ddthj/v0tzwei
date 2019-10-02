@@ -53,7 +53,7 @@ class defend:
             left =  agent.ball.location - Vector3(-1050*side(agent.team), side(agent.team)*5150, 0)
             right = agent.ball.location - Vector3(1050*side(agent.team), side(agent.team)*5150, 0)
             
-            vector = (agent.ball.location - agent.me.location).normalize().clamp(right,left)
+            vector = (agent.ball.location - agent.me.location).normalize().clamp(left,right)
             target = agent.ball.location + (vector*1000)
             targetShot(agent,target)
                   
